@@ -28,14 +28,14 @@ BookInfo.BookDetails();
 
 
 class Magazine extends LibraryItem {
-    constructor(issueNumber) {
-        super();
+    constructor(title, author, publishedYear, issueNumber) {
+        super(title, author, publishedYear);
         this.issueNumber = issueNumber;
 }
     MagazineDetails() {
-        console.log(`Issue number of the magazine is ${this.issueNumber}`);
+        console.log(`Title of the item is ${this.title}, it's written by ${this.author}, it's published in ${this.publishedYear}, issue number of the magazine is ${this.issueNumber}`);
     }
 }
 
-const magazineInfo = new Magazine(12);
+const magazineInfo = new Magazine("magazine", "group of authors", 1999, 12);
 magazineInfo.MagazineDetails();
